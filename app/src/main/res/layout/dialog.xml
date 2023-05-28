@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+
+
+    <TextView
+        android:id="@+id/itemCodeTV"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="item code"
+        android:textAlignment="center"
+        android:textColor="#A3EACB"
+        android:textSize="80px"
+       />
+
+    <EditText
+        android:id="@+id/ItemNameET"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Add Item Name"
+        android:textAlignment="center"
+        android:textSize="80px"
+       />
+
+    <EditText
+        android:id="@+id/ItemvalueET"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Add Item value"
+        android:textAlignment="center"
+        android:textSize="80px"
+
+        />
+
+
+
+</LinearLayout>

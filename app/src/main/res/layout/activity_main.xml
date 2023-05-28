@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    >
+
+    <TextView
+        android:id="@+id/iddd"
+        android:layout_width="742dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50px"
+        android:text="Bar Code Scanner"
+        android:textAlignment="center"
+        android:textColor="#A3EACB"
+        android:textSize="90px" />
+
+    <TextView
+            android:id="@+id/TotlTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="187dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/scan"
+            android:onClick="ScanClick"
+            android:text="Scan New "
+            android:textAllCaps="false"
+            android:textColor="#A3EACB"
+            android:textSize="50px" />
+
+        <Button
+            android:layout_width="187dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/scan"
+            android:onClick="showDetales"
+            android:text="show item detales"
+            android:textAllCaps="false"
+            android:textColor="#A3EACB"
+            android:textSize="50px" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="187dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/scan"
+            android:onClick="ModifyItem"
+            android:text="Modify Item"
+            android:textAllCaps="false"
+            android:textColor="#A3EACB"
+            android:textSize="50px"
+
+            />
+
+    <!--    <Button
+            android:layout_width="187dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/scan"
+            android:onClick="ItemsAdded"
+            android:text="All Data"
+            android:textAllCaps="false"
+            android:textColor="#A3EACB"
+            android:textSize="50px" />
+        -->
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
