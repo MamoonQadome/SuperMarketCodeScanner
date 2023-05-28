@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ScanOptions options = new ScanOptions();
 
-    public static ArrayList<String>[] ItemsAdded;
-    ListView view;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,21 +41,22 @@ public class MainActivity extends AppCompatActivity {
         myDB = new MyDatabaseHelper(MainActivity.this);
 
         getSupportActionBar().hide();
-        //view
-        showItems();
+
+
 
     }
 
 
 
     public void ScanClick(View view) {
-            ScanCode(); showItems();
+            ScanCode();
     }
-
+    //-------------------------- add an item -------------------------
     private void ScanCode(){
         scanOption();
         barLaucher.launch(options);
     }
+
     ActivityResultLauncher<ScanOptions> barLaucher = registerForActivityResult(new ScanContract(), result ->{
         TextView ids;
         EditText name,value;
@@ -99,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
         options.setOrientationLocked(true);
         options.setCaptureActivity(CaptureAct.class);
     }
+
+    // -----------------------show an item info--------------------
     public void showDetales(View view) {
        scanOption();
 
@@ -125,11 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
     });
 
-    public void showItems(){
-
-    }
 
 
+    // -------------------------modifying an item info---------------------
     ActivityResultLauncher<ScanOptions> blan = registerForActivityResult(new ScanContract(),result -> {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         LayoutInflater inflater = MainActivity.this.getLayoutInflater();
@@ -167,8 +168,5 @@ public class MainActivity extends AppCompatActivity {
         blan.launch(options);
     }
 
-    public void ItemsAdded(View view) {
 
-
-    }
 }
